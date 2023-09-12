@@ -28,7 +28,6 @@ class Matrix:
                     res_matrix[i][j] = self.matrix[i][j] + other.matrix[i][j]
             return res_matrix
         except (ValueError) as e:
-            # print('Матрицы разные, сложение не возможно')
             raise ValueError('Матрицы разные, сложение не возможно')
         except(TypeError)as e:
             print(f'введена строка вместо числа по адресу {i,j}. Оштбка {e}')
@@ -55,7 +54,7 @@ class Matrix:
 
 if __name__ == "__main__":
     try:
-        # matrix_1 = Matrix([[4, 7, hjj, 2], [8, 4, 2, 9], [10, 13, 12, 2]])            #Это для проверки NameError
+        matrix_1 = Matrix([[4, 7, hjj, 2], [8, 4, 2, 9], [10, 13, 12, 2]])            #Это для проверки NameError
         # matrix_1 = Matrix([[4, 7, 'hjj', 2], [8, 4, 2, 9], [10, 13, 12, 2]])            #Это для проверки TypeError
         # matrix_1 = Matrix([[4, 7, 2,5,7,8], [8, 4, 2, 9], [10, 13, 12, 2]])                   #Это для проверки IndexError
         # matrix_1 = Matrix([[4, 7, 1, 2], [8, 4, 2, 9], [10, 13, 12, 2]])            #Рабочий вариант
